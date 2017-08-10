@@ -8,8 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hell vitou bros art
-    </h1>
+    <h1>hell vitou bros art</h1>
 
 </body>
 </html>
