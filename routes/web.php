@@ -18,5 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'LearningController@index')->name('index');
-Route::get('index','learn@index')->name('index');
-Route::get('test','learn@test');
+Route::get('index','LearningController@index')->name('index');
+Route::get('test','LearningController@test');

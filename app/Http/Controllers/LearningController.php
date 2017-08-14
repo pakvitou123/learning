@@ -10,7 +10,8 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class LearningController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
     function index(){
-        return view('welcome');
+        return view('test');
     }
 }
