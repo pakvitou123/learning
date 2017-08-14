@@ -12,6 +12,7 @@ class learn extends Controller
     }
     function test()
     {
+        echo 'hello';
         return view('test');
     }
 }
