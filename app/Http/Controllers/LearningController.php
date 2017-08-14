@@ -16,6 +16,6 @@ class LearningController extends BaseController
     }
 
     function createGroup(){
-    
+
     }
 }
