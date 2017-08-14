@@ -10,4 +10,8 @@ class learn extends Controller
     {
         return view('index');
     }
+    function test()
+    {
+        return view('test');
+    }
 }

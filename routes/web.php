@@ -19,3 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('index','learn@index')->name('index');
+Route::get('test','learn@test');
