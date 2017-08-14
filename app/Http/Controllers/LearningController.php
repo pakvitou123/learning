@@ -14,4 +14,8 @@ class LearningController extends BaseController
     function index(){
         return view('test');
     }
+
+    function createGroup(){
+    
+    }
 }
