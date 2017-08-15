@@ -36,6 +36,9 @@
         </div>
     </div>
 
+    <div>
+        <h1>Funk-you</h1>
+    </div>
 @endsection
 
 @section('script')
