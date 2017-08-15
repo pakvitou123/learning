@@ -16,30 +16,24 @@
                 <a href="#"><span class="header-logo-default"></span> </a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                {{--<li><a href="#"><img src="{{asset('images/notification-circle-blue-512.png' )}}" style="width: 30px;height: 30px;" class="glyphicon glyphicon-user"></a></li>--}}
-                <li><a href="#" class='danger' title="Create" data-toggle="popover" data-placement="bottom" data-content="">
-                        <span class="glyphicon glyphicon-plus" style="font-size:25px"></span>
-                    </a>
+                <li><a href="#"><img src="{{asset('images/yuyu.jpg' )}}" style="width: 30px;height: 30px;" class="glyphicon glyphicon-user"></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-plus" ></span></a>
                 </li>
-                <li><a href="#"><i class="material-icons" style="font-size:25px">add_alert</i></a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-user" style="font-size:25px"></span>
+                <li><a href="#"><i class="material-icons">add_alert</i></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user" ></span>
                         ចុះឈ្មេាះ</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in" style="font-size:25px"></span>ចូល</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in" ></span>ចូល</a></li>
             </ul>
         </div>
     </nav>
-    {{--<div id="popover_content_wrapper" style="display: none">--}}
-        {{--<div>--}}
-            {{--<a class="js-new-org" href="#">Create Team… <span class="sub-name">A team is a group of boards and people. Use it to organize your company, side hustle, family, or friends.</span></a>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-    <div id="popover_content_wrapper" style="display: none">
-        <div>This is your div content</div>
-    </div>
-    <div class="container">
-        <h3>Question and Answer</h3>
-        <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
-        <p>កូសាឡប់ម៉ងពិធីការនី!! ចេញមកCover អង់គ្លេសឡើងកប់ម៉ង Idol !!.</p>
+    <div>
+        <a href="#" id="news" class="btn">News</a>
+        <div style="display:none;" class="alert_list">
+            <ul class="unstyled" style="list-style-type: none">
+                <li data-alert_id="2" class="alert_li"><a href="#" style="font-size: 22px;color:;"> Create Group</a> <br /><a href="#" class="turn_off_alert">turn off</a><div class="clearfix"></div></li>
+                <li data-alert_id="1" class="alert_li"><a href="#" class="alert_message">Messaggio di notifica un po più lungo del normale</a> <br /><a href="#" class="turn_off_alert">turn off</a><div class="clearfix"></div></li>
+            </ul>
+        </div>
     </div>
 
 @endsection
@@ -47,20 +41,21 @@
 @section('script')
     <script type="text/javascript">
 
-        $(document).ready(function () {
-            $('[data-toggle="popover"]').popover();
+        $("#news").popover({
+            'title' : 'Notifiche',
+            'html' : true,
+            'placement' : 'bottom',
+            'content' : $(".alert_list").html()
+        });
 
+        $('.turn_off_alert').live('click', function(event){
+            var alert = $(this).parent();
+            var alert_id = alert.data("alert_id");
+            alert.hide("fast");
 
         });
 
-        $(document).ready(function(){
-            $('.danger').popover({
-                html : true,
-                content: function() {
-                    return $('#popover_content_wrapper').html();
-                }
-            });
-        });
+
     </script>
 
 
