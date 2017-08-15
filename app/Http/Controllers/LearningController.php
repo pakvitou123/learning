@@ -12,10 +12,6 @@ class LearningController extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     function index(){
-        return view('test');
-    }
-
-    function createGroup(){
-
+        return view('index');
     }
 }

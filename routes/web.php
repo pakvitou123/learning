@@ -21,3 +21,5 @@ Route::get('/home', 'LearningController@index')->name('index');
 Route::get('index','LearningController@index')->name('index');
 Route::get('test','LearningController@test');
 Route::get('tocreate', 'LearningController@createGroup')->name('createWorkspace');
+Route::get('index','learn@index')->name('index');
+Route::get('index','learningController@index');
