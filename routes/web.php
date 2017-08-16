@@ -23,3 +23,5 @@ Route::get('test','LearningController@test');
 Route::get('tocreate', 'LearningController@createGroup')->name('createWorkspace');
 Route::get('index','learn@index')->name('index');
 Route::get('index','learningController@index');
+Route::get('create/question','LearningController@add');
+Route::any('created','learningController@created');
