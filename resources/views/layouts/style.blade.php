@@ -95,32 +95,7 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span>Learning</a>
-            </div>
-            <form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="ស្វែងរក...">
-                </div>
-                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-            </form>
-            <div class="header">
-                <a href="#"><span class="header-logo-default"></span> </a>
-            </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><img src="{{asset('images/yuyu.jpg' )}}" style="width: 30px;height: 30px;"
-                                     class="glyphicon glyphicon-user"></a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-plus"></span></a>
-                </li>
-                <li><a href="#"><i class="material-icons">add_alert</i></a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span>
-                        ចុះឈ្មេាះ</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>ចូល</a></li>
-            </ul>
-        </div>
-    </nav>
+
 @yield('content')
 
 <!-- Scripts -->
