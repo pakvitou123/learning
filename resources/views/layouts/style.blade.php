@@ -66,16 +66,17 @@
             color: grey
         }
 
-        ul {
+        ul.rate {
             list-style-type: none;
-            font-size: 15px;
-            font-weight: normal;
+            font-size: 13px;
+            font-weight: 400;
         }
 
         ul li {
             float: left;
             color: #848d95;
-            padding: 5px;
+            padding: 0px;
+
 
         }
 

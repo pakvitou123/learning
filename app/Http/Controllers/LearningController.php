@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\data;
 use App\Group;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\Request;
@@ -9,14 +10,12 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 
 class LearningController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
-    public function index(){
-        return view('index');
-    }
 
     public function createGroup(Request $request){
 
@@ -45,4 +44,43 @@ class LearningController extends BaseController
     public function showedit(){
         return view ('profile/profile');
     }
+    /*
+     * USERS FUNCTION
+     */
+    /*
+     * HERE
+     */
+    public function data(Request $request){
+
+        $uid = \auth()->id();
+        $search = $request->text;
+        $datas =data::all();
+        //return($Articles);
+        return view('data.index',compact('datas'));
+    }
+    public function search(Request $request)
+    {
+
+        $search = $request->title;
+        $datas = data::search($search)->get();
+            return view('data.index', compact('datas'));
+
+
+        }
+
+    public function create(){
+
+        return view('data/create_question');
+    }
+    public function created(Request $request){
+
+        $conn = new data();
+        $requests= $request->text;
+        $uid = \auth()->id();
+        $conn->user_id = $uid;
+        $conn->body = $requests;
+        $conn->save();
+        return redirect('data');
+    }
+
 }

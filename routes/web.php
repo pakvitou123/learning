@@ -17,14 +17,22 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'LearningController@index')->name('index');
-Route::get('index','LearningController@index')->name('index');
+Route::get('/home', 'LearningController@data')->name('data');
+
 Route::get('test','LearningController@test');
 Route::post('tocreate', 'LearningController@createGroup')->name('createWorkspace');
 Route::get('group','LearningController@group')->name('group');
 Route::get('formedit','learningController@showedit')->name('formedit');
 Route::get('tocreate', 'LearningController@createGroup')->name('createWorkspace');
-Route::get('index','learn@index')->name('index');
-Route::get('index','learningController@index');
-Route::get('create/question','LearningController@add');
-Route::any('created','learningController@created');
+
+//tou tou below
+
+
+Route::group(['middleware'=>'auth'],function(){
+
+    Route::get('data','learningController@data');
+    Route::get('create/question','LearningController@create');
+    Route::any('created','learningController@created');
+    Route::post('search','LearningController@search');
+
+});

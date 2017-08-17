@@ -9,6 +9,8 @@
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4",
+        "rackspace/php-opencloud": "dev-master",
+        "teamtnt/laravel-scout-tntsearch-driver": "^3.0",
         "twbs/bootstrap": "4.0.0-beta"
     },
     "require-dev": {
