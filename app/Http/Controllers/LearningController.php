@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use App\data;
 use App\Group;
+use Illuminate\Support\Facades\DB;
+use Image;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
+//use Intervention\Image\Facades\Image;
 
 
 class LearningController extends BaseController
@@ -47,8 +49,9 @@ class LearningController extends BaseController
     /*
      * USERS FUNCTION
      */
-    /*
-     * HERE
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function data(Request $request){
 
@@ -58,15 +61,22 @@ class LearningController extends BaseController
         //return($Articles);
         return view('data.index',compact('datas'));
     }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function search(Request $request)
     {
-
         $search = $request->title;
-        $datas = data::search($search)->get();
+        $datas = data::search('like'."%".$search."%")->get();
             return view('data.index', compact('datas'));
+//        $datas =Request::get('text');
+//        $results = data::where('body', 'like', "$datas%");
+//
+//        return view("data.index")->with("datas", $results);
 
-
-        }
+    }
 
     public function create(){
 
@@ -82,5 +92,23 @@ class LearningController extends BaseController
         $conn->save();
         return redirect('data');
     }
+//    public function avatar_profile (){
+//
+//        return view('data/profile', array('user'=>Auth::user()));
+//    }
+//    public function update_avatar(Request $request){
+//        if ($request->hasFile('avatar')){
+//            $avatar = $request->file('avatar');
+//            $filename = time().'.'.$avatar->getClientOriginalExtension();
+//            Image::make($avatar)->resize(300,300)->save(public_path('/uploads/avatar/'.$filename));
+//            $user = Auth::user();
+//            $user->picture = $filename;
+//            $user->save();
+//
+//        }
+//
+//        return view('data/profile',array('user',Auth::user()));
+//
+//    }
 
 }

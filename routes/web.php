@@ -30,9 +30,11 @@ Route::get('tocreate', 'LearningController@createGroup')->name('createWorkspace'
 
 Route::group(['middleware'=>'auth'],function(){
 
-    Route::get('data','learningController@data');
-    Route::get('create/question','LearningController@create');
-    Route::any('created','learningController@created');
-    Route::post('search','LearningController@search');
+    Route::get('/data','learningController@data');
+    Route::get('/create/question','LearningController@create');
+    Route::any('/created','learningController@created');
+    Route::post('/search','LearningController@search');
+//    Route::get('/profile','LearningController@avatar_profile');
+//    Route::post('/profile','LearningController@update_avatar');
 
 });

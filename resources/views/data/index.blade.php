@@ -1,6 +1,6 @@
 {{--@include('nav_bar')--}}
-@include('nav_bar')
-@include('index_content')
+@include('data/nav_bar')
+@include('data/index_content')
 <div class="container">
     <div class="col-md-12">
         {!! Form::open(['url'=>'/search']) !!}
@@ -14,7 +14,6 @@
             </div>
             <div class="col-md-2">
                 @if(isset($datas))
-
                     <div style="float: right; padding-right: 20%">
                         <a href="{{url('create/question')}}">
                             <button type="button" class="btn btn-success">Question</button>
