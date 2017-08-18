@@ -15,7 +15,7 @@
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="ស្វែងរក...">
                 </div>
-                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                <a href="{{url('search')}}"></a> <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
             </form>
             <div class="header">
                 <a href="#"><span class="header-logo-default"></span> </a>
