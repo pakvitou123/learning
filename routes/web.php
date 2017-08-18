@@ -22,9 +22,14 @@ Route::get('index','LearningController@index')->name('index');
 Route::get('test','LearningController@test');
 Route::post('tocreate', 'LearningController@createGroup')->name('createWorkspace');
 Route::get('group','LearningController@group')->name('group');
+Route::get('index_group','LearningController@indexGroup')->name('index-group');
 Route::get('formedit','learningController@showedit')->name('formedit');
-Route::get('tocreate', 'LearningController@createGroup')->name('createWorkspace');
-Route::get('index','learn@index')->name('index');
-Route::get('index','learningController@index');
+
+
+
 Route::get('create/question','LearningController@add');
 Route::any('created','learningController@created');
+
+//Route for new template forum
+
+Route::get('home', 'learningController@home');

@@ -18,7 +18,7 @@
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">Modal Header</h4>
+                                            <h4 class="modal-title">Create New Group</h4>
                                         </div>
                                         <div class="modal-body">
                                             {{--open form--}}
@@ -27,7 +27,8 @@
                                                 {{ csrf_field() }}
 
                                                 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                                    <label for="name" class="col-md-5 control-label"><h4>ឈ្មោះក្រុមរបស់ឣ្នក</h4></label>
+                                                    <label for="name" class="col-md-5 control-label"><h4>
+                                                            ឈ្មោះក្រុមរបស់ឣ្នក</h4></label>
 
                                                     <div class="col-md-6">
                                                         <input id="name" type="text" class="form-control" name="name"
@@ -42,9 +43,18 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label class="col-md-5 control-label"><h4>ដាក់ឈ្មោះសមាជិកក្រុម</h4></label>
+                                                    <label class="col-md-5 control-label"><h4>
+                                                            បញ្ជូលឈ្មោះសមាជិកក្រុម</h4></label>
                                                     <div class="col-md-6">
-                                                        <input id="name_fri" type="text" class="form-control" name="name_fri">
+
+                                                        <select class="form-control" style="width: 100%" id="users">
+                                                            @foreach($query as $querys)
+                                                                <option value="{{$querys->name}}" name="name_user"> {{$querys->name}} </option>
+                                                            @endforeach
+                                                            {{--<option value="AL">Alabama</option>--}}
+                                                            {{--...--}}
+                                                            {{--<option value="WY">Wyoming</option>--}}
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -57,9 +67,11 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-md-5 control-label"><h4>ពិពណនាក្រុមរបស់ឣ្នក</h4></label>
+                                                    <label class="col-md-5 control-label"><h4>ពិពណនាក្រុមរបស់ឣ្នក</h4>
+                                                    </label>
                                                     <div class="col-md-6">
-                                                        <textarea id="descript" class="form-control" name="descript"></textarea>
+                                                        <textarea id="descript" class="form-control"
+                                                                  name="descript"></textarea>
                                                     </div>
                                                 </div>
 

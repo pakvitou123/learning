@@ -1,5 +1,7 @@
-@include('nav_bar')
-@include('index_content')
+@extends('layouts.style')
+@section('content')
+    @include('index_content')
+@endsection
 
 
 

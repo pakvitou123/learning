@@ -1,8 +1,14 @@
-@extends('layouts.style')
-@section('content')
-    <nav class="navbar navbar-inverse">
+{{--@extends('layouts.style')--}}
+{{--@section('content')--}}
+    <nav class="navbar navbar-inverse" >
         <div class="container-fluid">
             <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand" href="/home"><span class="glyphicon glyphicon-home"></span>Learning</a>
             </div>
             <form class="navbar-form navbar-left">
@@ -62,6 +68,6 @@
             </ul>
         </div>
     </nav>
-@endsection
+{{--@endsection--}}
 
 

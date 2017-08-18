@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Group;
+use App\User;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class LearningController extends BaseController
 {
@@ -30,7 +32,6 @@ class LearningController extends BaseController
 //        ]);
     //    dd($request->name);
         $group = new Group();
-        $group->user_id = auth()->id();
         $group->title = $request->name;
         $group->description = $request->descript;
         $group->priority = $request->browser;
@@ -39,10 +40,18 @@ class LearningController extends BaseController
     }
 
     public function group(){
-        return view('group/group');
+        $query = DB::table('users')->get();
+        return view('group/group', compact('query'));
     }
+    public function indexGroup(){
+        return view('group/index_group');
+}
 
     public function showedit(){
         return view ('profile/profile');
+    }
+
+    public function home(){
+        return view('forum/content');
     }
 }

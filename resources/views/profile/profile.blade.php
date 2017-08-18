@@ -1,2 +1,4 @@
-@include('nav_bar')
-@include('profile.content_profile')
+@extends('layouts.style')
+@section('content')
+    @include('profile.content_profile')
+@endsection
