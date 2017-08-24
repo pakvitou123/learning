@@ -15,7 +15,6 @@
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
-                                <input id="img" type="hidden" name="img" value="images/yuyu.jpg">
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">

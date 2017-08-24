@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'LearningController@index')->name('index');
+//Route::get('/home', 'LearningController@index')->name('index');
 Route::get('index','LearningController@index')->name('index');
 Route::get('test','LearningController@test');
 Route::post('tocreate', 'LearningController@createGroup')->name('createWorkspace');
@@ -25,11 +25,13 @@ Route::get('group','LearningController@group')->name('group');
 Route::get('index_group','LearningController@indexGroup')->name('index-group');
 Route::get('formedit','learningController@showedit')->name('formedit');
 
-
-
 Route::get('create/question','LearningController@add');
 Route::any('created','learningController@created');
 
 //Route for new template forum
 
 Route::get('home', 'learningController@home');
+Route::post('user-profile','learningController@updateProfile');
+
+
+//Route::get('/home', 'HomeController@index')->name('home');

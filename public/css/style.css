@@ -441,7 +441,7 @@ ul.new li.new_right {
 	position: relative;
     margin-bottom: 22px;
 }
-.section input[type="text"], .section input[type="password"], .input-sm{
+.section input[type="text"],.section input[type="email"], .section input[type="password"], .input-sm{
     position: relative;
     vertical-align: top;
     border: 1px solid #DDD;

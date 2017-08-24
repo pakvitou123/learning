@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Group;
 use App\User;
+
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
@@ -11,6 +12,9 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
+
 
 class LearningController extends BaseController
 {
@@ -52,6 +56,23 @@ class LearningController extends BaseController
     }
 
     public function home(){
+        return view('forum/content');
+    }
+    public function updateProfile(Request $request){
+        if($request->hasFile('img')){
+            $file = $request->file('img');
+            $filename = time().'.'.$file->getClientOriginalExtension();
+            Image::make($file)->resize(300, 300)->save(public_path('/profile/'.$filename));
+
+            $user = Auth::user();
+            if($user->img != "images/yuyu.jpg"){
+                unlink(public_path('/profile/'.$user->img)); // delete old file
+            }
+            $user->img = $filename;
+            $user->name = $request->name;
+            $user->save();
+        }
+
         return view('forum/content');
     }
 }

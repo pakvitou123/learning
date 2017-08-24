@@ -19,41 +19,41 @@
             <aside>
                 <h3 class="widget-title"><span>FLICKR FEED</span></h3>
                 <ul class="gallery">
-                    <li><a href="images/pic5.jpg" class="img-responsive" title="Rose" rel="title1">
-                            <img src="images/pic5.jpg" class="img-responsive" alt="name">
+                    <li><a href="#" class="img-responsive" title="Rose" rel="title1">
+                            <img src="#" class="img-responsive" alt="name">
                         </a>
                     </li>
-                    <li><a href="images/pic6.jpg" class="img-responsive" title="Rose" rel="title1">
-                            <img src="images/pic6.jpg" class="img-responsive" alt="name">
+                    <li><a href="#" class="img-responsive" title="Rose" rel="title1">
+                            <img src="#" class="img-responsive" alt="name">
                         </a>
                     </li>
-                    <li><a href="images/pic11.jpg" class="img-responsive" title="Rose" rel="title1">
-                            <img src="images/pic11.jpg" class="img-responsive" alt="name">
-                        </a>
-                    </li>
-                    <li class="last">
-                        <a href="images/pic12.jpg" class="img-responsive" title="Rose" rel="title1">
-                            <img src="images/pic12.jpg" class="img-responsive" alt="name">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="images/pic6.jpg" class="img-responsive" title="Rose" rel="title1">
-                            <img src="images/pic6.jpg" class="img-responsive" alt="name">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="images/pic5.jpg" class="img-responsive" title="Rose" rel="title1">
-                            <img src="images/pic5.jpg" class="img-responsive" alt="name">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="images/pic11.jpg" class="img-responsive" title="Rose" rel="title1">
-                            <img src="images/pic11.jpg" class="img-responsive" alt="name">
+                    <li><a href="#" class="img-responsive" title="Rose" rel="title1">
+                            <img src="#" class="img-responsive" alt="name">
                         </a>
                     </li>
                     <li class="last">
-                        <a href="images/pic12.jpg" class="img-responsive" title="Rose" rel="title1">
-                            <img src="images/pic12.jpg" class="img-responsive" alt="name">
+                        <a href="#" class="img-responsive" title="Rose" rel="title1">
+                            <img src="#" class="img-responsive" alt="name">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="img-responsive" title="Rose" rel="title1">
+                            <img src="#" class="img-responsive" alt="name">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="img-responsive" title="Rose" rel="title1">
+                            <img src="#" class="img-responsive" alt="name">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="img-responsive" title="Rose" rel="title1">
+                            <img src="#" class="img-responsive" alt="name">
+                        </a>
+                    </li>
+                    <li class="last">
+                        <a href="#" class="img-responsive" title="Rose" rel="title1">
+                            <img src="#" class="img-responsive" alt="name">
                         </a>
                     </li>
                     <div class="clearfix"> </div>
